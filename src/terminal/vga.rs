@@ -137,7 +137,7 @@ fn calculate_view_start_index(t: &Screen) -> usize {
     }
     let mut row_position_last = 0;
     for (i, (start, end)) in rows.iter().enumerate() {
-        if *start <= t.last_entry_index && t.last_entry_index <= *end {
+        if *start <= t.last_entry_index && t.last_entry_index - 1 <= *end {
             row_position_last = i;
             break;
         }
